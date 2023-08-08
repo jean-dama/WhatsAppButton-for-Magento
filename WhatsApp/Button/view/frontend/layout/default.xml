@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+        <css src="WhatsApp_Button::css/whatsapp-button.less" />
+    </head>
+	<body>
+		<referenceContainer name="before.body.end">
+			<block class="Magento\Framework\View\Element\Template" name="whatsapp_button" 
+                template="WhatsApp_Button::button.phtml" 
+                before="before.body.end" cacheable="false">
+            </block>
+		</referenceContainer>
+	</body>
+</page>

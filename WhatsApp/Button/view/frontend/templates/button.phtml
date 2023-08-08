@@ -1,0 +1,9 @@
+<?php $helper = $this->helper('WhatsApp\Button\Helper\Data');?>
+<?php if($helper->getStatus()): ?>
+	<?php var_dump($helper) ?>
+	<div class="whatsapp-button">
+		<a href="https://api.whatsapp.com/send?phone=<?php echo $helper->getPhone(); ?>&amp;text=<?php echo $helper->getMessage(); ?>" onclick="gtag('event', 'WhatsApp', {'event_action': 'whatsapp_button', 'event_category': 'Conversa', 'event_label': 'WhatsApp'});" target="_blank" class="btn-whatsapp">
+			<img src="<?php echo $this->getViewFileUrl('WhatsApp_Button::images/button.png'); ?>" alt="WhatsApp" title="WhatsApp" loading="lazy">
+		</a>
+	</div>
+<?php endif; ?>

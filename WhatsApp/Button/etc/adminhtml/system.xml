@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="whatsapp" translate="label" sortOrder="10">
+            <label>WhatsApp</label>
+        </tab>
+        <section id="whatsapp_button" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="100" translate="label" type="text">
+        <!-- Na linha acima estamos informando o id, onde deve aparecer e o tipo-->
+            <class>separator-top</class>
+            <label>WhatsApp Button</label>
+            <tab>whatsapp</tab>
+            <resource>WhatsApp_Button::config_whatsapp_button</resource>
+            <group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+                <label>General</label>
+                <!--Configuração de ativo no admin-->
+                <field id="status" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <!--Configuração do numero de telefone no admin-->
+                <field id="phone_number" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Número de telefone</label>
+                    <comment>Insira o número de telefone completo no formato internacional (apenas números, sem espaços, hífens e etc.). Por exemplo: 5541996608080</comment>
+                    <depends>
+                        <field id="status">1</field>
+                    </depends>
+                </field>
+                <!--Campo da mensagem-->
+                <field id="message" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Mensagem</label>
+                    <comment>Mensagem pré-definida, será exibida automaticamente no campo de texto da conversa.</comment>
+                    <depends>
+                        <field id="status">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
