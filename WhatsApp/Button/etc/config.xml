@@ -2,10 +2,12 @@
  <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
+        <whatsapp>
             <whatsapp_button>
-                <general>
-                    <enable>0</enable>
-                </general>
+                <enable>1</enable>
+                <phone_number>+5585xxxxxxxxx</phone_number>
+                <message>Insira sua mensagem aqui!</message>
             </whatsapp_button>
+        </whatsapp>
     </default>
 </config>

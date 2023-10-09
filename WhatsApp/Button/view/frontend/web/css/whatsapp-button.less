@@ -1,28 +1,55 @@
-.whatsapp-button a {
-    position: fixed;
-    z-index: 9999;
-    right: 20px;
-    float: right;
-    bottom: 45px;
-    cursor: pointer;
-    max-height: 48px;
-    max-width: 48px;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    margin: 0 auto;
-    background: #20b038;
-    border-radius: 100%;
-    -webkit-transition: All .5s ease;
-    -moz-transition: All .5s ease;
-    -o-transition: All .5s ease;
-    -ms-transition: All .5s ease;
-    transition: All .5s ease;
-    img{
+// Css utilizado tanto para mobile quanto para desktop (_styles.css) - common
+@screen__xxs: 320px;
+@screen__xs: 480px;
+@screen__s: 640px;
+@screen__m: 769px;
+@screen__l: 1024px;
+@screen__xl: 1440px;
+//  ---------------------------------------------
+@media @screen__xl {
+    .whatsapp-button a {
+        position: fixed;
+        z-index: 9999;
+        right: 20px;
+        float: right;
+        bottom: 45px;
+        cursor: pointer;
+        max-height: 48px;
+        max-width: 48px;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        margin: 0 auto;
+        background: #20b038;
+        border-radius: 100%;
+        -webkit-transition: All .5s ease;
+        -moz-transition: All .5s ease;
+        -o-transition: All .5s ease;
+        -ms-transition: All .5s ease;
+        transition: All .5s ease;
+        img{
+            width: 48px;
+        }
+    }
+    .whatsapp-button a img{
         width: 48px;
     }
 }
 
-.whatsapp-button a img{
-	width: 48px;
-}
+//
+// Css utilizado somente para desktop (styles-l.css) - Desktop
+//  ---------------------------------------------
+// DESKTOP entre 769px //
+@media @screen__m {}
+// Maior que 1024px
+@media @screen__l {}
+
+//
+// Css utilizado somente para mobile (styles-m.css) - Mobile
+//  ---------------------------------------------
+// Menor que 1024px
+@media @screen__l {}
+// Menor que 769px
+@media @screen__m {}
+// Menor que 375px
+@media @screen__xs {}

@@ -1,0 +1,21 @@
+{
+    "name": "whatsapp/button",
+    "description": "Add whatsapp button to magento",
+    "license": "proprietary",
+    "authors": [
+      {
+        "name": "jean",
+        "email": "jeandamaceno3@gmail.com"
+      }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+      "psr-4": {
+        "WhatsApp\\Button\\": ""
+      },
+      "files": [
+        "registration.php"
+      ]
+    }
+  }
