@@ -10,7 +10,7 @@ Frontend
 
 Backend
 
-Set status, phone number and message function under menu Stores >> Configuration >> General - Contacts Under tabs WhatsApp Chat
+Set status, phone number and message function under menu Stores > Configuration > General - Contacts Under tabs WhatsApp Chat
 Configuração da funcionalidade, número de telefone e mensagem seguindo o seguinte caminho. Lojas > Configuração > Geral
 
 # Instalação:
@@ -24,5 +24,5 @@ Ative o módulo com os seguintes comandos:
 
 php bin/magento module:enable WhatsApp_Button
 php bin/magento setup:upgrade
-php bin/magento cache:clean
+php bin/magento cache:flush
 php bin/magento setup:static-content:deploy
